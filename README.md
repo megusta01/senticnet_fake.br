@@ -1,0 +1,1 @@
+# senticnet_fake.br
