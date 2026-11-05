@@ -1,0 +1,23 @@
+# Python / tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+.env
+*.egg-info/
+build/
+dist/
+# Third-party resources and all derived rows stay local
+data/*
+!data/.gitkeep
+senticnet_data.py
+# Locally generated experiment outputs (publish curated aggregates separately)
+results/*.json
+!results/published_summary.json
+results/ABLATION_REPORT.md
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

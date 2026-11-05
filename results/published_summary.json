@@ -1,0 +1,283 @@
+{
+  "source": "Fake.Br Corpus; derived from original thesis-enriched CSV; not redistributed",
+  "n_rows": 7200,
+  "seed": 42,
+  "ablation": {
+    "protocol": "5 outer folds, 3 inner folds, grouped exact duplicates, logistic regression, fast hyperparameter grid",
+    "summary": {
+      "length_only": {
+        "accuracy": {
+          "mean": 0.937361111111111,
+          "std": 0.00657708916252863
+        },
+        "precision": {
+          "mean": 0.9195518517013751,
+          "std": 0.005881646955433484
+        },
+        "recall": {
+          "mean": 0.9586111111111111,
+          "std": 0.011257713405088594
+        },
+        "f1": {
+          "mean": 0.9386464987424903,
+          "std": 0.006632735388214803
+        },
+        "roc_auc": {
+          "mean": 0.9803518518518517,
+          "std": 0.001475807816844463
+        },
+        "confusion_matrix_sum": [
+          [
+            3298,
+            302
+          ],
+          [
+            149,
+            3451
+          ]
+        ]
+      },
+      "emotion_only": {
+        "accuracy": {
+          "mean": 0.6094444444444445,
+          "std": 0.01074258644741792
+        },
+        "precision": {
+          "mean": 0.6104250501413347,
+          "std": 0.009599849360519773
+        },
+        "recall": {
+          "mean": 0.6047222222222223,
+          "std": 0.018098240143624343
+        },
+        "f1": {
+          "mean": 0.6075144307033927,
+          "std": 0.01323229393449812
+        },
+        "roc_auc": {
+          "mean": 0.6398981481481482,
+          "std": 0.014127223908406419
+        },
+        "confusion_matrix_sum": [
+          [
+            2211,
+            1389
+          ],
+          [
+            1423,
+            2177
+          ]
+        ]
+      },
+      "emotion_plus_length": {
+        "accuracy": {
+          "mean": 0.9388888888888889,
+          "std": 0.005555555555555536
+        },
+        "precision": {
+          "mean": 0.9215970169828243,
+          "std": 0.004707631979740891
+        },
+        "recall": {
+          "mean": 0.9594444444444445,
+          "std": 0.013117465503464003
+        },
+        "f1": {
+          "mean": 0.9400897842349345,
+          "std": 0.005809330433341215
+        },
+        "roc_auc": {
+          "mean": 0.9806871141975309,
+          "std": 0.0022809628484561023
+        },
+        "confusion_matrix_sum": [
+          [
+            3306,
+            294
+          ],
+          [
+            146,
+            3454
+          ]
+        ]
+      },
+      "means_only": {
+        "accuracy": {
+          "mean": 0.5490277777777778,
+          "std": 0.010663736576724788
+        },
+        "precision": {
+          "mean": 0.5499538550325547,
+          "std": 0.01208338059275954
+        },
+        "recall": {
+          "mean": 0.5422222222222222,
+          "std": 0.005432668671002235
+        },
+        "f1": {
+          "mean": 0.54597878180936,
+          "std": 0.005511729750635974
+        },
+        "roc_auc": {
+          "mean": 0.5680239197530864,
+          "std": 0.012658017446976704
+        },
+        "confusion_matrix_sum": [
+          [
+            2001,
+            1599
+          ],
+          [
+            1648,
+            1952
+          ]
+        ]
+      }
+    },
+    "length_audit": {
+      "fake": {
+        "n": 3600,
+        "mean": 107.94083333333333,
+        "std": 72.15200449447097,
+        "median": 92.0,
+        "min": 5.0,
+        "p25": 67.75,
+        "p75": 130.0,
+        "p90": 179.0,
+        "max": 1220.0
+      },
+      "true": {
+        "n": 3600,
+        "mean": 624.9355555555555,
+        "std": 385.43283660509604,
+        "median": 523.0,
+        "min": 13.0,
+        "p25": 364.0,
+        "p75": 806.0,
+        "p90": 1123.1,
+        "max": 4229.0
+      }
+    },
+    "paired_f1_differences": {
+      "emotion_only_minus_length_only": {
+        "mean": -0.33113206803909756,
+        "std": 0.011035615712363982,
+        "by_fold": [
+          -0.33381430882859375,
+          -0.3345667924076403,
+          -0.3142495446621212,
+          -0.34442620897844045,
+          -0.3286034853186919
+        ]
+      },
+      "emotion_plus_length_minus_length_only": {
+        "mean": 0.0014432854924443018,
+        "std": 0.004209065211331337,
+        "by_fold": [
+          -0.000993591288917628,
+          0.002093411991488492,
+          0.003408854102682324,
+          -0.004151777081507491,
+          0.006859529738475811
+        ]
+      },
+      "means_only_minus_length_only": {
+        "mean": -0.3926677169331302,
+        "std": 0.00947920227712008,
+        "by_fold": [
+          -0.39306424638743254,
+          -0.38790012574097366,
+          -0.39459884386022015,
+          -0.4067295699031336,
+          -0.3810457987738911
+        ]
+      }
+    }
+  },
+  "nested_selection": {
+    "protocol": "5 outer folds, 3 inner folds, grouped exact duplicates, reduced hyperparameter grid",
+    "summary": {
+      "selected_model_outer": {
+        "accuracy": {
+          "mean": 0.9375,
+          "std": 0.003437324630767927
+        },
+        "precision": {
+          "mean": 0.9303832434998031,
+          "std": 0.0042321710649177715
+        },
+        "recall": {
+          "mean": 0.9458333333333334,
+          "std": 0.011907241805196018
+        },
+        "f1": {
+          "mean": 0.9379908969354462,
+          "std": 0.0039140326064373105
+        },
+        "roc_auc": {
+          "mean": 0.9793290895061728,
+          "std": 0.0030555011798184353
+        },
+        "confusion_matrix_sum": [
+          [
+            3345,
+            255
+          ],
+          [
+            195,
+            3405
+          ]
+        ]
+      },
+      "length_only_outer": {
+        "accuracy": {
+          "mean": 0.937361111111111,
+          "std": 0.006160626421171332
+        },
+        "precision": {
+          "mean": 0.918888604161008,
+          "std": 0.005919459494283249
+        },
+        "recall": {
+          "mean": 0.9594444444444445,
+          "std": 0.010865337342004431
+        },
+        "f1": {
+          "mean": 0.938698514284839,
+          "std": 0.006211388021095145
+        },
+        "roc_auc": {
+          "mean": 0.9803518518518517,
+          "std": 0.001475807816844463
+        },
+        "confusion_matrix_sum": [
+          [
+            3295,
+            305
+          ],
+          [
+            146,
+            3454
+          ]
+        ]
+      }
+    },
+    "selection_counts": {
+      "A/logistic_regression": 0,
+      "A/random_forest": 0,
+      "B/logistic_regression": 5,
+      "B/random_forest": 0,
+      "C/logistic_regression": 0,
+      "C/random_forest": 0
+    }
+  },
+  "limitations": [
+    "The Fake.Br corpus can encode collection/source artifacts and text-length differences.",
+    "Emotion-only ratios may still correlate with length; this is not a causal isolation of emotion.",
+    "Only exact normalized-text duplicates are grouped, not similar or related articles.",
+    "Performance on this corpus does not establish out-of-distribution generalization.",
+    "Outer folds are evaluation folds, not an untouched external dataset.",
+    "Metrics are descriptive of this corpus and not external validation.",
+    "Some exploratory results were inspected before the final nested-CV runs."
+  ]
+}

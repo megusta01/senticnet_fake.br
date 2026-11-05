@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "senticnet-fake-news-detection"
+version = "0.1.0"
+description = "Portuguese fake-news classification using SenticNet emotional features"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3", "pandas>=2.0,<3", "scikit-learn>=1.3,<2"]
+
+[project.optional-dependencies]
+notebooks = ["jupyterlab>=4", "matplotlib>=3.7", "seaborn>=0.12"]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
